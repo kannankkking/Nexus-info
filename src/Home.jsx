@@ -63,7 +63,7 @@ function App() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-gray-800 text-white p-4 md:hidden">
+        <div className="absolute top-20 left-0 w-full bg-gray-800 text-white p-4 md:hidden z-10">
           <ul className="flex flex-col gap-2">
             <li><a href="/" className="hover:text-yellow-300">Home</a></li>
             <li><a href="/about" className="hover:text-yellow-300">About Us</a></li>
@@ -123,7 +123,7 @@ function App() {
             <p className="text-base text-center mx-4 mt-2">
                 Boost your online presence and connect with more people using our smart digital marketing strategies.
             </p>
-            <a className="text-blue-900 text-center mt-4 hover:underline">Explore</a>
+            <a href="/digital" className="text-blue-900 text-center mt-4 hover:underline">Explore</a>
         </div>
 
         {/* Service Card 2 */}
@@ -133,7 +133,7 @@ function App() {
             <p className="text-base text-center mx-4 mt-2">
                 We make attractive, easy-to-use websites that represent your brand well and help you reach more customers online.
             </p>
-            <a className="text-blue-900 text-center mt-4 hover:underline">Explore</a>
+            <a href="/Website_development" className="text-blue-900 text-center mt-4 hover:underline">Explore</a>
         </div>
 
         {/* Service Card 3 */}
@@ -148,20 +148,24 @@ function App() {
     </div>
 </div>
 
-
 <div className="relative hover:text-white">
     <img className="w-full h-auto opacity-65 hover:opacity-100" src={profile} alt="Profile" />
     
-    <p className="absolute bottom-24 left-8 right-8 text-xl md:text-2xl">
+    <p className="absolute bottom-24 left-4 right-4 text-base md:text-lg md:mt-4 lg:text-xl text-center">
         At Techy Software, we're here to assist you with all things digital.
         Our team of young,<br /> forward-thinking individuals stays updated on the latest marketing and sales trends. <br />
         Let us help grow your business exponentially, by a factor of 10.
     </p>
     
-    <div className="absolute bottom-10 left-10 right-10 flex gap-5 text-lg md:text-2xl">
-        <h3>10+ Projects Done</h3> | <h3>10+ Happy Clients</h3> | <h3>4.0/5 Ratings</h3>
+    <div className="absolute bottom-10 left-4 right-4 flex flex-col md:flex-row justify-center gap-2 md:gap-5 text-sm md:text-lg lg:text-xl text-center">
+        <h3>10+ Projects Done</h3> 
+        <span className="hidden md:inline">|</span>
+        <h3>10+ Happy Clients</h3> 
+        {/* <span className="hidden md:inline">|</span> */}
+        <h3>4.0/5 Ratings</h3>
     </div>
 </div>
+
 
 
                 <marquee className="bg-blue-400 p-3  text-lg">
