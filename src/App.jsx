@@ -5,10 +5,6 @@ import DigitalMarketing from './DigitalMarketing';
 import Website_development from './Website_development';
 import Contact from './Contact';
 import About from './About';
-// import Contact from './Contact';
-// import DigitalMarketing from './DigitalMarketing';
-// import Website_development from './Website_development';
-// import About from './About';
 
 const App = () => {
   return (
