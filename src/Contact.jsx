@@ -6,6 +6,7 @@ import { CiMail } from "react-icons/ci";
 import { BsTelephoneForward } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; 
 const Contact = () => {
     const [isOpen, setIsOpen]=useState(false);
     return (
@@ -19,20 +20,20 @@ const Contact = () => {
       <h1 className="text-lg font-semibold">Techy Software</h1>
       
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-5 ml-auto items-center">
-        <li><a href="/" className="hover:text-yellow-300">Home</a></li>
-        <li><a href="/about" className="hover:text-yellow-300">About Us</a></li>
-        <li><a href="#" className="hover:text-yellow-300">Products</a></li>
-        <li className="relative group">
-          <a href="#" className="hover:text-yellow-300">Services</a>
-          <ul className="absolute left-0 hidden group-hover:block bg-gray-800 text-white p-2 rounded-md">
-            <li className="hover:bg-gray-600 p-1"><a href="/digital">Digital Marketing</a></li>
-            <li className="hover:bg-gray-600 p-1"><a href="/Website_development">Website Development</a></li>
-          </ul>
-        </li>
-        <li><a href="/contact" className="hover:text-yellow-300">Contact Us</a></li>
-      </ul>
-
+     
+<ul className="hidden md:flex gap-5 ml-auto items-center">
+  <li><Link to="/" className="hover:text-yellow-300">Home</Link></li>
+  <li><Link to="/about" className="hover:text-yellow-300">About Us</Link></li>
+  <li><Link to="#" className="hover:text-yellow-300">Products</Link></li>
+  <li className="relative group">
+    <Link to="#" className="hover:text-yellow-300">Services</Link>
+    <ul className="absolute left-0 hidden group-hover:block bg-gray-800 text-white p-2 rounded-md">
+      <li className="hover:bg-gray-600 p-1"><Link to="/digital">Digital Marketing</Link></li>
+      <li className="hover:bg-gray-600 p-1"><Link to="/website_development">Website Development</Link></li>
+    </ul>
+  </li>
+  <li><Link to="/contact" className="hover:text-yellow-300">Contact Us</Link></li>
+</ul>
       {/* Hamburger Icon */}
       <div className="md:hidden flex items-center">
         <button onClick={() => setIsOpen(!isOpen)}>
@@ -41,23 +42,24 @@ const Contact = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-gray-800 text-white p-4 md:hidden">
-          <ul className="flex flex-col gap-2">
-            <li><a href="/" className="hover:text-yellow-300">Home</a></li>
-            <li><a href="/about" className="hover:text-yellow-300">About Us</a></li>
-            <li><a href="#" className="hover:text-yellow-300">Products</a></li>
-            <li className="relative group">
-              <a href="#" className="hover:text-yellow-300">Services</a>
-              <ul className="absolute left-0 hidden group-hover:block bg-gray-800 text-white p-2 rounded-md">
-                <li className="hover:bg-gray-600 p-1"><a href="/digital_marketing">Digital Marketing</a></li>
-                <li className="hover:bg-gray-600 p-1"><a href="/Website_development">Website Development</a></li>
-              </ul>
-            </li>
-            <li><a href="/contact" className="hover:text-yellow-300">Contact Us</a></li>
-          </ul>
-        </div>
-      )}
+     
+{isOpen && (
+  <div className="absolute top-20 left-0 w-full bg-gray-800 text-white p-4 md:hidden">
+    <ul className="flex flex-col gap-2">
+      <li><Link to="/" className="hover:text-yellow-300">Home</Link></li>
+      <li><Link to="/about" className="hover:text-yellow-300">About Us</Link></li>
+      <li><Link to="#" className="hover:text-yellow-300">Products</Link></li>
+      <li className="relative group">
+        <Link to="#" className="hover:text-yellow-300">Services</Link>
+        <ul className="absolute left-0 hidden group-hover:block bg-gray-800 text-white p-2 rounded-md">
+          <li className="hover:bg-gray-600 p-1"><Link to="/digital">Digital Marketing</Link></li>
+          <li className="hover:bg-gray-600 p-1"><Link to="/website_development">Website Development</Link></li>
+        </ul>
+      </li>
+      <li><Link to="#contact" className="hover:text-yellow-300">Contact Us</Link></li>
+    </ul>
+  </div>
+)}
     </div>
             <div>
                 <div className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... flex flex-col gap-10 h-[550px]">
@@ -101,28 +103,28 @@ const Contact = () => {
                         We develop websites for your business, bringing your vision to life and propelling your business into the digital realm.
                     </p>
                     <div className="flex gap-9 text-2xl mt-5">
-                    <a href='https://www.facebook.com/techyitsolutionofficial/'target='_blank'><FaInstagramSquare className="hover:-translate-y-2 transition-all cursor-pointer" /></a>
-                        <a href='https://www.linkedin.com/company/techy-softwares'target='_blank'><FaLinkedin className="hover:-translate-y-2 transition-all cursor-pointer" /></a>
-                        <a><FaFacebook className="hover:-translate-y-2 transition-all cursor-pointer" /></a>
+                    <Link to='https://www.facebook.com/techyitsolutionofficial/'target='_blank'><FaFacebook className="hover:-translate-y-2 transition-all cursor-pointer" /></Link>
+                        <Link to='https://www.linkedin.com/company/techy-softwares'target='_blank'><FaLinkedin className="hover:-translate-y-2 transition-all cursor-pointer" /></Link>
+                        <Link to='https://www.instagram.com/'><FaInstagramSquare className="hover:-translate-y-2 transition-all cursor-pointer" /></Link>
                     </div>
                 </div>
 
                 <div className="flex-1 mb-4 md:mb-0">
                     <h1 className="text-xl mb-3">Company</h1>
                     <ul className="flex flex-col space-y-2">
-                        <a href='/about'><li className="hover:text-sky-300 cursor-pointer">About Us</li></a>
-                        <a href='/digital'><li className="hover:text-sky-300 cursor-pointer">Services</li></a>
-                        <a><li className="hover:text-sky-300 cursor-pointer">Products</li></a>
-                        <a href='/contact'><li className="hover:text-sky-300 cursor-pointer">Contact Us</li></a>
+                        <Link to='/about'><li className="hover:text-sky-300 cursor-pointer">About Us</li></Link>
+                        <Link to='/digital'><li className="hover:text-sky-300 cursor-pointer">Services</li></Link>
+                        <Link to='/Website_development'><li className="hover:text-sky-300 cursor-pointer">Products</li></Link>
+                        <Link to='/contact'><li className="hover:text-sky-300 cursor-pointer">Contact Us</li></Link>
                     </ul>
                 </div>
 
                 <div className="flex-1 mb-4 md:mb-0">
                     <h1 className="text-xl mb-3">Services</h1>
                     <ul className="flex flex-col space-y-2">
-                        <a href='/digital'><li className="hover:text-sky-300 cursor-pointer">Digital Marketing</li></a>
-                        <a href='/Website_development'><li className="hover:text-sky-300 cursor-pointer">Websites</li></a>
-                        <a><li className="hover:text-sky-300 cursor-pointer">Creative Design</li></a>
+                        <Link to='/digital'><li className="hover:text-sky-300 cursor-pointer">Digital Marketing</li></Link>
+                        <Link to='/Website_development'><li className="hover:text-sky-300 cursor-pointer">Websites</li></Link>
+                        <Link to><li className="hover:text-sky-300 cursor-pointer">Creative Design</li></Link>
                     </ul>
                 </div>
 
